@@ -7,14 +7,14 @@ export default function Hero() {
 
         {/* Profile image on the left, text on the right for larger screens, stacked on smaller screens */}
         <div className="rounded-2xl transition duration-500 flex justify-center md:justify-end hover:scale-102" >
-            <Image
-              src="/profile.jpeg"
-              alt="Paul Henry Atienza"
-              width={400}
-              height={600}
-              className="rounded-2xl shadow-md object-cover w-48 sm:w-56 md:w-80 lg:w-96 mx-auto"
-              priority
-            />
+          <Image
+            src="/profile.jpeg"
+            alt="Paul Henry Atienza"
+            width={400}
+            height={600}
+            className="rounded-2xl shadow-md object-cover w-48 sm:w-56 md:w-80 lg:w-96 mx-auto"
+            priority
+          />
         </div>
         {/* Rigth Text*/}
         <div className="text-left md:text-left">
@@ -35,21 +35,25 @@ export default function Hero() {
             data-driven solutions.
           </p>
 
-          <div className="flex justify-center gap-4">
+          <div className="flex justify-start gap-4">
             <a
               href="#experience"
-              className="bg-black text-white px-6 py-3 rounded-lg inline-flex items-center gap-2"
+              className="bg-black text-white px-6 py-3 rounded-lg inline-flex items-center gap-2
+               transition duration-300 ease-out
+               hover:-translate-y-1 hover:shadow-lg hover:bg-gray-800"
             >
               <FiBriefcase />
               View Experience
             </a>
 
             <a
-              href="/cv.pdf"
-              className="border border-black px-6 py-3 rounded-lg inline-flex items-center gap-2"
+              href="/Paul_Henry_Atienza_CV.pdf"
               download
+              className="group border border-black px-6 py-3 rounded-lg inline-flex items-center gap-2
+             transition duration-300 ease-out
+             hover:-translate-y-1 hover:shadow-md hover:bg-gray-50"
             >
-              <FiDownload />
+              <FiDownload className="transition-transform duration-300 group-hover:-translate-y-0.5" />
               Download CV
             </a>
           </div>
