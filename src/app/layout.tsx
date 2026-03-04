@@ -3,10 +3,25 @@ import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import { Analytics } from "@vercel/analytics/next"
 
-export const metadata: Metadata = {
-  title: "Paul Henry Atienza",
+export const metadata = {
+  title: "Paul Henry Atienza | Backend Engineer",
   description:
-    "Enterprise Software Engineer expanding into Data & AI Engineering",
+    "Backend engineer specializing in enterprise systems, performance optimization, and data engineering.",
+  keywords: [
+    "Paul Henry Atienza",
+    "Backend Engineer",
+    "Java Developer",
+    "Enterprise Systems",
+    "Data Engineering",
+  ],
+  openGraph: {
+    title: "Paul Henry Atienza | Backend Engineer",
+    description:
+      "Enterprise software engineer building scalable backend and data-driven systems.",
+    url: "https://paulatienza.dev",
+    siteName: "Paul Henry Atienza",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
