@@ -4,7 +4,7 @@ import Navbar from "@/components/Navbar";
 import { Analytics } from "@vercel/analytics/next"
 
 export const metadata = {
-  title: "Paul Henry Atienza | Backend Engineer",
+  title: "Paul Henry Atienza | Enterprise Java Developer",
   description:
     "Backend engineer specializing in enterprise systems, performance optimization, and data engineering.",
   keywords: [
@@ -15,7 +15,7 @@ export const metadata = {
     "Data Engineering",
   ],
   openGraph: {
-    title: "Paul Henry Atienza | Backend Engineer",
+    title: "Paul Henry Atienza | Enterprise Java Developer",
     description:
       "Enterprise software engineer building scalable backend and data-driven systems.",
     url: "https://paulatienza.dev",

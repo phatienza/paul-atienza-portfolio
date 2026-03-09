@@ -8,7 +8,7 @@ export default function Hero() {
         {/* Profile image on the left, text on the right for larger screens, stacked on smaller screens */}
         <div className="rounded-2xl transition duration-500 flex justify-center md:justify-end hover:scale-102" >
           <Image
-            src="/profile.jpeg"
+            src="/images/profile/profile.jpeg"
             alt="Paul Henry Atienza"
             width={400}
             height={600}

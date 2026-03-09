@@ -22,7 +22,7 @@ export default function Certifications() {
                         <div className="flex items-start gap-4">
                             <div className="bg-white p-4 rounded-xl shadow-sm">
                             <Image
-                                src="/oracle-certified-associate-java-se-8-programmer.png"
+                                src="/images/certifications/oracle-certified-associate-java-se-8-programmer.png"
                                 alt="Oracle"
                                 width={32}
                                 height={32}
@@ -47,7 +47,7 @@ export default function Certifications() {
                         <div className="flex items-start gap-4">
                              <div className="bg-white p-4 rounded-xl shadow-sm">
                             <Image
-                                src="/Philnitslogo.png"
+                                src="/images/certifications/Philnitslogo.png"
                                 alt="ITPEC"
                                 width={32}
                                 height={32}
@@ -65,7 +65,7 @@ export default function Certifications() {
                         <div className="flex items-start gap-4">
                              <div className="bg-white p-4 rounded-xl shadow-sm">
                             <Image
-                                src="/pcep-30-02-pcep-certified-entry-level-python-progra.png"
+                                src="/images/certifications/pcep-30-02-pcep-certified-entry-level-python-progra.png"
                                 alt="Python"
                                 width={32}
                                 height={32}
@@ -90,7 +90,7 @@ export default function Certifications() {
                         <div className="flex items-start gap-4">
                              <div className="bg-white p-4 rounded-xl shadow-sm">
                             <Image
-                                src="/jsa-41-01-jsa-certified-associate-javascript-programmer.png"
+                                src="/images/certifications/jsa-41-01-jsa-certified-associate-javascript-programmer.png"
                                 alt="JavaScript"
                                 width={32}
                                 height={32}
@@ -120,7 +120,7 @@ export default function Certifications() {
                         <div className="flex items-start gap-4">
                              <div className="bg-white p-4 rounded-xl shadow-sm">
                             <Image
-                                src="/Japanese-Language_Proficiency_Test_logo.jpg"
+                                src="/images/certifications/Japanese-Language_Proficiency_Test_logo.jpg"
                                 alt="JLPT"
                                 width={32}
                                 height={32}
