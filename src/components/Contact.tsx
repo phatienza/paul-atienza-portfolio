@@ -25,6 +25,7 @@ export default function Contact() {
               atienzapaulhenry@gmail.com
             </a>
 
+            {/* Temporarily removed LinkedIn link to avoid confusion with the old profile. Will add back once the new profile is set up.
             <a
               href="https://linkedin.com/in/paul-henry-atienza"
               target="_blank"
@@ -33,6 +34,7 @@ export default function Contact() {
               <FiLinkedin className="text-gray-500" />
               LinkedIn ↗
             </a>
+            */}
             <a
               href="https://github.com/phatienza"
               target="_blank"
