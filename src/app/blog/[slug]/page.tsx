@@ -7,13 +7,8 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export async function generateStaticParams() {
-    const fs = require("fs");
-    const path = require("path");
-
     const postsDirectory = path.join(process.cwd(), "content/blog");
-
     const fileNames = fs.readdirSync(postsDirectory);
-
     return fileNames.map((fileName: string) => ({
         slug: fileName.replace(".md", ""),
     }));
@@ -44,37 +39,72 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
     const { slug } = await params;
 
     const filePath = path.join(process.cwd(), "content/blog", `${slug}.md`);
-
     const fileContent = fs.readFileSync(filePath, "utf8");
-
     const { data, content } = matter(fileContent);
 
-    const processedContent = await remark()
-        .use(html)
-        .process(content);
-
+    const processedContent = await remark().use(html).process(content);
     const contentHtml = processedContent.toString();
 
+    // Reading time
+    const words = content.split(/\s+/).length;
+    const readingTime = `${Math.ceil(words / 200)} min read`;
+
     return (
-        <main className="max-w-3xl mx-auto px-6 py-12 bg-white text-black">
+        <div className="min-h-screen" style={{ backgroundColor: "#FAFAF7" }}>
 
-            <Link
-                href="/blog"
-                className="inline-flex items-center gap-1 text-sm text-gray-500 hover:text-black transition mb-8"
-            >
-                ← Back to Blog
-            </Link>
+            {/* Top bar */}
+            <div className="max-w-2xl mx-auto px-6 pt-8">
+                <Link
+                    href="/blog"
+                    className="blog-link-muted text-xs tracking-widest uppercase"
+                >
+                    ← All writing
+                </Link>
+            </div>
 
-            <header className="mb-10">
-                <h1 className="text-4xl font-bold mb-2">{data.title}</h1>
-                <p className="text-gray-600">{data.date}</p>
+            {/* Post header */}
+            <header className="max-w-2xl mx-auto px-6 pt-12 pb-10">
+                <h1
+                    className="text-4xl md:text-5xl font-bold leading-tight mb-5"
+                    style={{ fontFamily: "var(--font-playfair, Georgia, serif)", color: "#1C1C1C" }}
+                >
+                    {data.title}
+                </h1>
+                <p className="text-sm tracking-wide" style={{ color: "#8C8880" }}>
+                    {data.date} · {readingTime}
+                </p>
+                <div className="mt-8" style={{ height: "1px", backgroundColor: "#E5DDD5" }} />
             </header>
 
-            <article
-                className="prose prose-lg prose-neutral max-w-none"
-                dangerouslySetInnerHTML={{ __html: contentHtml }}
-            />
+            {/* Post content */}
+            <main className="max-w-2xl mx-auto px-6 pb-16">
+                <div
+                    className="blog-prose"
+                    dangerouslySetInnerHTML={{ __html: contentHtml }}
+                />
+            </main>
 
-        </main>
+            {/* Bottom rule + back link */}
+            <div className="max-w-2xl mx-auto px-6 pb-16">
+                <div className="mb-8" style={{ height: "1px", backgroundColor: "#E5DDD5" }} />
+                <Link
+                    href="/blog"
+                    className="blog-link-muted text-xs tracking-widest uppercase"
+                >
+                    ← All writing
+                </Link>
+            </div>
+
+            {/* Footer */}
+            <footer className="border-t max-w-2xl mx-auto px-6 py-8 flex justify-between items-center text-xs"
+                style={{ borderColor: "#E5DDD5", color: "#8C8880" }}
+            >
+                <span>Paul Henry Atienza</span>
+                <Link href="/" className="transition hover:text-[#1C1C1C]">
+                    ← Back to portfolio
+                </Link>
+            </footer>
+
+        </div>
     );
 }
