@@ -3,6 +3,8 @@ import path from "path";
 import matter from "gray-matter";
 import { remark } from "remark";
 import html from "remark-html";
+import Link from "next/link";
+import type { Metadata } from "next";
 
 export async function generateStaticParams() {
     const fs = require("fs");
@@ -15,6 +17,26 @@ export async function generateStaticParams() {
     return fileNames.map((fileName: string) => ({
         slug: fileName.replace(".md", ""),
     }));
+}
+
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+    const { slug } = await params;
+    const filePath = path.join(process.cwd(), "content/blog", `${slug}.md`);
+    const fileContent = fs.readFileSync(filePath, "utf8");
+    const { data } = matter(fileContent);
+
+    return {
+        title: `${data.title} | Paul Henry Atienza`,
+        description: data.description,
+        openGraph: {
+            title: data.title,
+            description: data.description,
+            url: `https://paulatienza.dev/blog/${slug}`,
+            siteName: "Paul Henry Atienza",
+            type: "article",
+            ...(data.image && { images: [{ url: data.image }] }),
+        },
+    };
 }
 
 export default async function BlogPost({ params }: { params: Promise<{ slug: string }> }) {
@@ -35,6 +57,13 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
 
     return (
         <main className="max-w-3xl mx-auto px-6 py-12 bg-white text-black">
+
+            <Link
+                href="/blog"
+                className="inline-flex items-center gap-1 text-sm text-gray-500 hover:text-black transition mb-8"
+            >
+                ← Back to Blog
+            </Link>
 
             <header className="mb-10">
                 <h1 className="text-4xl font-bold mb-2">{data.title}</h1>

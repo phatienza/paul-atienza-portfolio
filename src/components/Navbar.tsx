@@ -55,6 +55,18 @@ export default function Navbar() {
             Certifications
           </a>
           <a
+            href="#services"
+            className="text-gray-600 hover:text-black transition"
+          >
+            Services
+          </a>
+          <a
+            href="/blog"
+            className="text-gray-600 hover:text-black transition"
+          >
+            Blog
+          </a>
+          <a
             href="#contact"
             className="text-gray-600 hover:text-black transition"
           >

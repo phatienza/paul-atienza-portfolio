@@ -4,18 +4,20 @@ import Navbar from "@/components/Navbar";
 import { Analytics } from "@vercel/analytics/next"
 
 export const metadata = {
-  title: "Paul Henry Atienza | Enterprise Java Developer",
+  metadataBase: new URL("https://paulatienza.dev"),
+  title: "Paul Henry Atienza | Enterprise Software Engineer",
   description:
-    "Backend engineer specializing in enterprise systems, performance optimization, and data engineering.",
+    "Enterprise software engineer specializing in backend systems, performance optimization, and data engineering.",
   keywords: [
     "Paul Henry Atienza",
+    "Software Engineer",
     "Backend Engineer",
     "Java Developer",
     "Enterprise Systems",
     "Data Engineering",
   ],
   openGraph: {
-    title: "Paul Henry Atienza | Enterprise Java Developer",
+    title: "Paul Henry Atienza | Enterprise Software Engineer",
     description:
       "Enterprise software engineer building scalable backend and data-driven systems.",
     url: "https://paulatienza.dev",
