@@ -19,15 +19,19 @@ export default function Skills() {
             title: "Data & AI (Expanding)",
             skills: ["Python", "SQL", "Data Analysis"],
         },
+        {
+            title: "Languages",
+            skills: ["Japanese (JLPT N3)", "English (Professional)"],
+        },
     ];
 
     return (
-        <section id="skills" className="py-24 bg-gray-50">
+        <section id="skills" className="py-24 bg-white">
             <FadeIn>
                 <div className="max-w-5xl mx-auto px-6">
 
                     <h2 className="text-3xl font-bold flex items-center gap-3 mb-12">
-                        <FiCode className="text-gray-500" />
+                        <FiCode style={{ color: "var(--color-accent)" }} />
                         Skills
                     </h2>
 
@@ -42,7 +46,7 @@ export default function Skills() {
                                     {group.skills.map((skill) => (
                                         <span
                                             key={skill}
-                                            className="px-4 py-2 bg-gray-100 rounded-full text-sm transition duration-300 hover:bg-gray-200"
+                                            className="px-4 py-2 bg-gray-100 rounded-full text-sm transition duration-300 hover:bg-[#FEF3C7] hover:text-amber-900"
                                         >
                                             {skill}
                                         </span>

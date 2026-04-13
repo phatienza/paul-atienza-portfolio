@@ -1,4 +1,4 @@
-import { FiMail, FiLinkedin, FiGithub } from "react-icons/fi";
+import { FiMail, FiGithub, FiLinkedin } from "react-icons/fi";
 import FadeIn from "./FadeIn";
 
 export default function Contact() {
@@ -9,39 +9,42 @@ export default function Contact() {
 
           <h2 className="text-3xl font-bold mb-6">Contact</h2>
 
-          <p className="text-gray-600 mb-10">
-            I build and optimize enterprise systems with a focus on performance, reliability, and modernization.
-            Currently expanding into data engineering and AI-driven solutions to design scalable, data-driven platforms.
-            Open to meaningful technical collaboration and growth-oriented opportunities.
+          <p className="text-gray-600 mb-10 leading-relaxed max-w-xl">
+            Open to technical collaboration, enterprise work, and freelance opportunities.
+            Feel free to reach out.
+          </p>
+
+          <p className="text-xs text-gray-400 uppercase tracking-widest mb-4 font-semibold">
+            Get in touch
           </p>
 
           <div className="flex flex-col gap-4 text-gray-700">
 
             <a
               href="mailto:atienzapaulhenry@gmail.com"
-              className="flex items-center gap-3 hover:text-gray-900 transition"
+              className="flex items-center gap-3 transition hover:text-[#D97706]"
             >
-              <FiMail className="text-gray-500" />
+              <FiMail style={{ color: "var(--color-accent)" }} />
               atienzapaulhenry@gmail.com
             </a>
 
-            {/* Temporarily removed LinkedIn link to avoid confusion with the old profile. Will add back once the new profile is set up.
             <a
-              href="https://linkedin.com/in/paul-henry-atienza"
+              href="https://www.linkedin.com/in/paul-henry-atienza-a933063b6/"
               target="_blank"
-              className="flex items-center gap-3 hover:text-gray-900 transition"
+              rel="noopener noreferrer"
+              className="flex items-center gap-3 transition hover:text-[#D97706]"
             >
-              <FiLinkedin className="text-gray-500" />
+              <FiLinkedin style={{ color: "var(--color-accent)" }} />
               LinkedIn ↗
             </a>
-            */}
+
             <a
               href="https://github.com/phatienza"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-3 hover:text-gray-900 transition"
+              className="flex items-center gap-3 transition hover:text-[#D97706]"
             >
-              <FiGithub className="text-gray-500" />
+              <FiGithub style={{ color: "var(--color-accent)" }} />
               GitHub ↗
             </a>
 

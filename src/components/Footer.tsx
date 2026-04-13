@@ -10,13 +10,16 @@ export default function Footer() {
 
                 {/* Top Row */}
                 <div className="flex justify-between items-center text-sm">
-                    <p className="text-gray-700 font-medium">
+                    <p
+                        className="text-gray-700 font-medium inline-block"
+                        style={{ borderBottom: "2px solid var(--color-accent)", paddingBottom: "2px" }}
+                    >
                         Paul Henry Atienza
                     </p>
 
                     <a
                         href="#top"
-                        className="text-gray-400 hover:text-gray-800 transition duration-300"
+                        className="text-gray-400 transition duration-300 hover:text-[#D97706]"
                     >
                         Back to top ↑
                     </a>
@@ -24,7 +27,7 @@ export default function Footer() {
 
                 {/* Tagline */}
                 <p className="text-sm text-gray-500 text-center mt-6 max-w-md mx-auto leading-relaxed">
-                    Enterprise software engineer focused on building systems that last.
+                    Software engineer based in Japan. Originally from the Philippines.
                 </p>
 
                 {/* Copyright */}
