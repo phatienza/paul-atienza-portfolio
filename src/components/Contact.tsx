@@ -29,7 +29,7 @@ export default function Contact() {
             </a>
 
             <a
-              href="https://www.linkedin.com/in/paul-henry-atienza-a933063b6/"
+              href="https://www.linkedin.com/in/paulhenryatienza/"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-3 transition hover:text-[#D97706]"
