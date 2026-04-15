@@ -42,3 +42,8 @@ Uses Tailwind CSS v4 (no `tailwind.config.ts` — configured via PostCSS in `pos
 - `src/app/sitemap.ts` and `src/app/robots.ts` generate dynamic sitemap and robots.txt
 - Vercel Analytics is included in the root layout (`src/app/layout.tsx`)
 - Each blog post generates dynamic Open Graph metadata via `generateMetadata()`
+
+## Blog Writing Style
+
+- Do not use em-dashes (—) anywhere in blog post copy. Use a comma, period, or rewrite the sentence instead.
+- Write in a natural, human voice. Avoid patterns that sound AI-generated.
