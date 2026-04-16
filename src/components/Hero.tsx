@@ -1,4 +1,4 @@
-import { FiBriefcase, FiDownload, FiUser } from "react-icons/fi";
+import { FiBriefcase, FiLinkedin, FiUser } from "react-icons/fi";
 import Image from "next/image";
 export default function Hero() {
   return (
@@ -64,14 +64,15 @@ export default function Hero() {
             </a>
 
             <a
-              href="/Paul_Henry_Atienza_CV.pdf"
-              download
+              href="https://www.linkedin.com/in/paulhenryatienza/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="group border border-gray-300 text-gray-600 px-6 py-3 rounded-lg inline-flex items-center gap-2
              transition duration-300 ease-out
              hover:-translate-y-1 hover:shadow-md hover:bg-gray-50"
             >
-              <FiDownload className="transition-transform duration-300 group-hover:-translate-y-0.5" />
-              Download CV
+              <FiLinkedin />
+              Connect on LinkedIn
             </a>
           </div>
         </div>
